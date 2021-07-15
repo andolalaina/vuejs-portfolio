@@ -11,11 +11,12 @@
       <Degree v-for="course in courses" :key="course.id" :date="course.date" :title="course.title" :course="course.description" :institution="course.institution" />
     </Scroller>
   </Content>
-  <Content illustrationFilename="projets.svg" contentLink="projets">
-
+  <Content illustrationFilename="projets.svg" contentLink="projets" reversed>
+    <Scroller width="100%" height="60vh">
+      <Card v-for="project in projects" :key="project.id" :illustrationFilename="project.illustration" :title="project.title" :link="project.link" :technos="project.technos" />
+    </Scroller>
   </Content>
   <Content illustrationFilename="contacts.svg" contentLink="contacts">
-
   </Content>
 </template>
 
@@ -25,6 +26,7 @@ import Navbar from "./components/Navbar.vue"
 import Content from "./components/Content.vue"
 import Degree from "./components/Degree.vue"
 import Scroller from "./components/Scroller.vue"
+import Card from "./components/Card.vue"
 
 export default {
   name: 'App',
@@ -32,7 +34,8 @@ export default {
     Navbar,
     Content,
     Degree,
-    Scroller
+    Scroller,
+    Card
   },
   data() {
     return {
@@ -65,6 +68,72 @@ export default {
           description : "Série D, avec mention",
           institution : "College Saint Michel, Amparibe, Antananarivo"
         }
+      ],
+      projects : [
+        {
+          id : 1,
+          illustration : "html-visit-card.png",
+          title : "Visit Card",
+          link : "https://andolalaina.github.io/w1-visit-card/",
+          technos : [
+            {
+              id : 1,
+              logo : "html.png"
+            },
+            {
+              id : 2,
+              logo : "css.png"
+            },
+          ]
+        },
+        {
+          id : 1,
+          illustration : "html-visit-card.png",
+          title : "Visit Card",
+          link : "https://andolalaina.github.io/w1-visit-card/",
+          technos : [
+            {
+              id : 1,
+              logo : "html.png"
+            },
+            {
+              id : 2,
+              logo : "css.png"
+            },
+          ]
+        },
+        {
+          id : 1,
+          illustration : "html-visit-card.png",
+          title : "Visit Card",
+          link : "https://andolalaina.github.io/w1-visit-card/",
+          technos : [
+            {
+              id : 1,
+              logo : "html.png"
+            },
+            {
+              id : 2,
+              logo : "css.png"
+            },
+          ]
+        },
+        {
+          id : 1,
+          illustration : "html-visit-card.png",
+          title : "Visit Card",
+          link : "https://andolalaina.github.io/w1-visit-card/",
+          technos : [
+            {
+              id : 1,
+              logo : "html.png"
+            },
+            {
+              id : 2,
+              logo : "css.png"
+            },
+          ]
+        },
       ]
     }
   }
