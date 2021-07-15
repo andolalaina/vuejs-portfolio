@@ -11,12 +11,12 @@
       <Degree v-for="course in courses" :key="course.id" :date="course.date" :title="course.title" :course="course.description" :institution="course.institution" />
     </Scroller>
   </Content>
-  <Content illustrationFilename="projets.svg" contentLink="projets" reversed>
+  <Content illustrationFilename="projets.svg" contentLink="projets">
     <Scroller width="100%" height="60vh">
       <Card v-for="project in projects" :key="project.id" :illustrationFilename="project.illustration" :title="project.title" :link="project.link" :technos="project.technos" />
     </Scroller>
   </Content>
-  <Content illustrationFilename="contacts.svg" contentLink="contacts">
+  <Content illustrationFilename="contacts.svg" contentLink="contacts" reversed>
     <h2>Réseaux Sociaux</h2>
     <p class="credential">
       <img src="./assets/social-logos/github.svg" alt="github logo">
@@ -165,8 +165,14 @@ export default {
     --red : #D05353;
     --white : #FEFFFE;
 
-    font-size: 22px;
+    font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  @media screen and (min-width: 1367px) {
+    :root {
+      font-size: 22px;
+    }
   }
 
   body {

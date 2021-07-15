@@ -37,6 +37,10 @@ export default {
         align-items: center;
         justify-content: space-around;
     }
+    .illustration>img {
+        max-width: 70%;
+        height: auto;
+    }
     .text {
         width: 50%;
         color: var(--white);
