@@ -1,5 +1,7 @@
 # vuejs-portfolio
 
+Live preview here : https://andolalaina.github.io/vuejs-portfolio-preview
+
 ## Project setup
 ```
 npm install
