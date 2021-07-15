@@ -6,8 +6,8 @@
     <div class="title-2"><strong>Etudiant en Master 2</strong></div>
     <div class="title-3">Electronique Systèmes Informatiques et Intelligence Artificielle (ESIIA-5)</div>
   </Content>
-  <Content illustrationFilename="presentation.svg" contentLink="presentation" reversed>
-
+  <Content illustrationFilename="presentation.svg" contentLink="presentation">
+    <Degree v-for="course in courses" :key="course.id" :date="course.date" :title="course.title" :course="course.description" :institution="course.institution" />
   </Content>
   <Content illustrationFilename="projets.svg" contentLink="projets">
 
@@ -21,11 +21,48 @@
 <script>
 import Navbar from "./components/Navbar.vue"
 import Content from "./components/Content.vue"
+import Degree from "./components/Degree.vue"
+
 export default {
   name: 'App',
   components: {
     Navbar,
-    Content
+    Content,
+    Degree
+  },
+  data() {
+    return {
+      courses : [
+        {
+          id : 1,
+          date : "2022",
+          title : "Diplôme de Master",
+          description : "Master en Electronique Systèmes Informatiques et Intelligence Artificielle",
+          institution : "Institut Supérieur Polytechnique de Madagascar (ISPM), Antsobolo, Antananarivo"
+        },
+        {
+          id : 2,
+          date : "2020",
+          title : "Diplôme de Licence",
+          description : "Licence en Electronique Systèmes Informatiques et Intelligence Artificielle",
+          institution : "Institut Supérieur Polytechnique de Madagascar (ISPM), Antsobolo, Antananarivo"
+        },
+        {
+          id : 2,
+          date : "2019 - 2020",
+          title : "Stage de trois (03) mois",
+          description : "Stage en tant qu'administrateur systèmes et réseaux",
+          institution : "Bolloré Madagascar, Tanjombato, Antananarivo"
+        },
+        {
+          id : 3,
+          date : "2016",
+          title : "Baccalauréat",
+          description : "Série D, avec mention",
+          institution : "College Saint Michel, Amparibe, Antananarivo"
+        }
+      ]
+    }
   }
 }
 </script>
