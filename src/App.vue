@@ -1,10 +1,10 @@
 
 <template>
   <Navbar/>
-  <Content illustration-url="https://picsum.photos/500/300" contentLink="accueil"/>
-  <Content illustration-url="https://picsum.photos/500/300" contentLink="presentation"/>
-  <Content illustration-url="https://picsum.photos/200/300" contentLink="projets"/>
-  <Content illustration-url="https://picsum.photos/600/300" contentLink="contacts"/>
+  <Content illustrationFilename="accueil.svg" contentLink="accueil"/>
+  <Content illustrationFilename="presentation.svg" contentLink="presentation"/>
+  <Content illustrationFilename="projets.svg" contentLink="projets"/>
+  <Content illustrationFilename="contacts.svg" contentLink="contacts"/>
 </template>
 
 
@@ -33,7 +33,7 @@ export default {
   }
 
   body {
-    background: linear-gradient(var(--dark), var(--primary));
+    background: linear-gradient(var(--dark), var(--primary)) no-repeat;
     height: 400vh;
     -ms-overflow-style: none;
     scrollbar-width: none;

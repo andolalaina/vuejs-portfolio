@@ -1,7 +1,7 @@
 <template>
     <div :id="contentLink" class="container">
         <div class="illustration">
-            <img :src="illustrationUrl"/>
+            <img :src="require(`@/assets/${illustrationFilename}`)"/>
         </div>
         <div class="text">
 
@@ -13,7 +13,7 @@
 export default {
     name: 'Content',
     props: {
-        illustrationUrl: String,
+        illustrationFilename: String,
         contentLink: String
     }
 }
