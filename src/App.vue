@@ -55,14 +55,14 @@ export default {
           institution : "Institut Supérieur Polytechnique de Madagascar (ISPM), Antsobolo, Antananarivo"
         },
         {
-          id : 2,
+          id : 3,
           date : "2019 - 2020",
           title : "Stage de trois (03) mois",
           description : "Stage en tant qu'administrateur systèmes et réseaux",
           institution : "Bolloré Madagascar, Tanjombato, Antananarivo"
         },
         {
-          id : 3,
+          id : 4,
           date : "2016",
           title : "Baccalauréat",
           description : "Série D, avec mention",
@@ -87,7 +87,7 @@ export default {
           ]
         },
         {
-          id : 1,
+          id : 2,
           illustration : "html-visit-card.png",
           title : "Visit Card",
           link : "https://andolalaina.github.io/w1-visit-card/",
@@ -103,7 +103,7 @@ export default {
           ]
         },
         {
-          id : 1,
+          id : 3,
           illustration : "html-visit-card.png",
           title : "Visit Card",
           link : "https://andolalaina.github.io/w1-visit-card/",
@@ -119,7 +119,7 @@ export default {
           ]
         },
         {
-          id : 1,
+          id : 4,
           illustration : "html-visit-card.png",
           title : "Visit Card",
           link : "https://andolalaina.github.io/w1-visit-card/",

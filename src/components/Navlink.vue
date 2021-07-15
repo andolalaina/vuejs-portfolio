@@ -1,5 +1,5 @@
 <template>
-    <a :href="url" :class="active?'active':''" @click="e">{{name}}</a>
+    <a :href="url" :class="active?'active':''" @click="$emit('handle-nav')">{{name}}</a>
 </template>
 
 <script>
@@ -8,7 +8,8 @@ export default {
     props: {
         url: String,
         name: String,
-        active: Boolean
+        active: Boolean,
+        key: String
     }
 }
 </script>
