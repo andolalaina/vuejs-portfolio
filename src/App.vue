@@ -7,7 +7,9 @@
     <div class="title-3">Electronique Systèmes Informatiques et Intelligence Artificielle (ESIIA-5)</div>
   </Content>
   <Content illustrationFilename="presentation.svg" contentLink="presentation">
-    <Degree v-for="course in courses" :key="course.id" :date="course.date" :title="course.title" :course="course.description" :institution="course.institution" />
+    <Scroller width="100%" height="60vh">
+      <Degree v-for="course in courses" :key="course.id" :date="course.date" :title="course.title" :course="course.description" :institution="course.institution" />
+    </Scroller>
   </Content>
   <Content illustrationFilename="projets.svg" contentLink="projets">
 
@@ -22,13 +24,15 @@
 import Navbar from "./components/Navbar.vue"
 import Content from "./components/Content.vue"
 import Degree from "./components/Degree.vue"
+import Scroller from "./components/Scroller.vue"
 
 export default {
   name: 'App',
   components: {
     Navbar,
     Content,
-    Degree
+    Degree,
+    Scroller
   },
   data() {
     return {
