@@ -1,10 +1,20 @@
 
 <template>
   <Navbar/>
-  <Content illustrationFilename="accueil.svg" contentLink="accueil"/>
-  <Content illustrationFilename="presentation.svg" contentLink="presentation"/>
-  <Content illustrationFilename="projets.svg" contentLink="projets"/>
-  <Content illustrationFilename="contacts.svg" contentLink="contacts"/>
+  <Content illustrationFilename="accueil.svg" contentLink="accueil">
+    <div class="title-1">Michael <strong>RANDRIAJAOSON</strong></div>
+    <div class="title-2"><strong>Etudiant en Master 2</strong></div>
+    <div class="title-3">Electronique Systèmes Informatiques et Intelligence Artificielle (ESIIA-5)</div>
+  </Content>
+  <Content illustrationFilename="presentation.svg" contentLink="presentation" reversed>
+
+  </Content>
+  <Content illustrationFilename="projets.svg" contentLink="projets">
+
+  </Content>
+  <Content illustrationFilename="contacts.svg" contentLink="contacts">
+
+  </Content>
 </template>
 
 
@@ -33,7 +43,7 @@ export default {
   }
 
   body {
-    background: linear-gradient(var(--dark), var(--primary)) no-repeat;
+    background: linear-gradient(#06050F, #18143E, #2B236C, #4338A8, #7066CC ) no-repeat;
     height: 400vh;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -45,5 +55,18 @@ export default {
 
   html {
     scroll-behavior: smooth;
+  }
+</style>
+
+<style scoped>
+  .title-1 {
+    font-size: 2.35rem;
+    margin: 1.15rem 0;
+  }
+  .title-2 {
+    font-size: 1.45rem;
+  }
+  .title-3 {
+    font-size: 1.18rem;
   }
 </style>

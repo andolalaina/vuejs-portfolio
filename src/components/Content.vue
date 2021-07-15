@@ -1,10 +1,10 @@
 <template>
-    <div :id="contentLink" class="container">
+    <div :id="contentLink" :class="reversed ? 'container reversed':'container'">
         <div class="illustration">
             <img :src="require(`@/assets/${illustrationFilename}`)"/>
         </div>
         <div class="text">
-
+            <slot></slot>
         </div>
     </div>
 </template>
@@ -14,18 +14,22 @@ export default {
     name: 'Content',
     props: {
         illustrationFilename: String,
-        contentLink: String
+        contentLink: String,
+        reversed: Boolean
     }
 }
 </script>
 
-<style>
+<style scoped>
     .container {
         margin: auto;
         width: 95%;
         height: 100vh;
         display: flex;
         flex-flow: row wrap;
+    }
+    .container.reversed {
+        flex-flow: row-reverse wrap;
     }
     .illustration {
         width: 50%;
@@ -35,5 +39,9 @@ export default {
     }
     .text {
         width: 50%;
+        color: var(--white);
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
     }
 </style>
