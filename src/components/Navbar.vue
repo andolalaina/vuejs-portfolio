@@ -26,7 +26,7 @@ export default {
                     id: 1,
                     url: "#accueil",
                     name: "accueil",
-                    active: false
+                    active: true
                 },
                 {
                     id: 2,

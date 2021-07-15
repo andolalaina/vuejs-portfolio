@@ -17,6 +17,23 @@
     </Scroller>
   </Content>
   <Content illustrationFilename="contacts.svg" contentLink="contacts">
+    <h2>Réseaux Sociaux</h2>
+    <p class="credential">
+      <img src="./assets/social-logos/github.svg" alt="github logo">
+      <a href="http://www.github.com/andolalaina" target="_blank">Andolalaina</a>
+    </p>
+    <p class="credential">
+      <img src="./assets/social-logos/linkedin.svg" alt="linkedin logo">
+      <a href="https://www.linkedin.com/in/michael-randriajaoson-9b5ba318b/" target="_blank">Michael <strong>RANDRIAJAOSON</strong></a>
+    </p>
+    <h2>Formulaire de contact</h2>
+    <form action="" method="get" class="form">
+      <label for="mail">Votre adresse e-mail</label>
+      <input type="mail" name="mail" id="mail">
+      <label for="message">Votre message</label>
+      <textarea name="message" cols="30" rows="10" id="message"></textarea>
+      <input type="submit" value="Envoyer" class="btn btn-dark">
+    </form>
   </Content>
 </template>
 
@@ -155,12 +172,7 @@ export default {
   body {
     background: linear-gradient(#06050F, #18143E, #2B236C, #4338A8, #7066CC ) no-repeat;
     height: 400vh;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  body::-webkit-scrollbar {
-    display: none;
+    overflow: hidden;
   }
 
   html {
@@ -178,5 +190,44 @@ export default {
   }
   .title-3 {
     font-size: 1.18rem;
+  }
+
+  h2 {
+    margin: .5rem 0;
+  }
+  .credential {
+    font-size: .81rem;
+    display: flex;
+    align-items: center;
+    margin: .5rem;
+  }
+  .credential>a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 1rem;
+  }
+  .form {
+    display: flex;
+    flex-flow: column;
+  }
+  .form>input[type="mail"] {
+    border: 0;
+    width: 30%;
+    height: 1.25rem;
+    border-radius: 3px;
+    margin: .5rem 0;
+    font-size: .8rem;
+  }
+  .btn {
+    padding: .25rem 2rem;
+    margin: .5rem 0;
+    font-size: 1rem;
+    max-width: fit-content;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .btn-dark {
+    color: var(--white);
+    background-color: var(--dark);
   }
 </style>
